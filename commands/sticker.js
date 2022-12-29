@@ -1,12 +1,15 @@
 const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter');
-const { pack, author } = require('../../config.json').sticker;
 const fs = require('fs');
 const { Quoted } = require(`../lib/myfuncs.js`)
 
 module.exports = {
-	let path = `./tmp/${d.msg.messageTimestamp}.webp`;
-	let img = ctx.msg.message.imageMessage;
-	let isq = Quoted(ctx);
+	name: 'sticker',
+	aliases: 's',
+	code: async(ctx) => {
+		const pack = `${ctx.pushName}`
+	let path = `./tmp/${ctx.msg.messageTimestamp}.webp`
+	let img = ctx.msg.message.imageMessage
+	let isq = Quoted(ctx)
 
 	if(isq.isQuoted && isq.type === 'imageMessage') {
 		img = isq.data.viaType;
@@ -23,7 +26,7 @@ module.exports = {
 	    for await (const chunk of stream) {
 	      buffer = Buffer.concat([buffer, chunk]);
 	    }
-
+        let author = `RGB`
 	    await fs.writeFileSync(path, buffer);
 		const s = new Sticker(path, {
 		    pack,
@@ -40,4 +43,5 @@ module.exports = {
 		ctx({text: 'Pakai command sticker ini di caption sebuah image atau kamu dapat me-reply imagenya!'})
 	}
 	
+}
 }

@@ -1,0 +1,32 @@
+{
+  "name": "regbotv1",
+  "version": "1.0.0",
+  "description": "A simple bot whatsapp",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"nope\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RegadSLY/RegBotV1.git"
+  },
+  "keywords": [
+    "bot"
+  ],
+  "author": "RegatSA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RegadSLY/RegBotV1/issues"
+  },
+  "homepage": "https://github.com/RegadSLY/RegBotV1#readme",
+  "dependencies": {
+    "@bochilteam/scraper": "^4.0.22-alpha.0",
+    "@mengkodingan/ckptw": "github:mengkodingan/ckptw",
+    "moment-timezone": "^0.5.40",
+    "util": "^0.12.5",
+    "wa-sticker-formatter": "^4.3.2"
+  }
+}

@@ -3,11 +3,9 @@ module.exports = {
 	nonPrefixed: true,
 	code: async(ctx) => {
 		if (ctx.isOwner() == false) return ctx.react(ctx.id, "😨");
-		if (ctx.args.join(" ").length < 1) return ctx.reply({text: `mana commandnya?`})
-		const cps = require('child_process')
-		let input = `${ctx.args.join('')}`
+		const { execSync } = require('child_process')
 		try {
-			let output = cps.execSync(`${input}`)
+			let output = await execSync(ctx.args.join(' '))
 			ctx.reply({text: `${output}`})
 		} catch(err) {
 			ctx.reply({text: `${err}`})

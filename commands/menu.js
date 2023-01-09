@@ -40,7 +40,7 @@ module.exports = {
 > ytmp4
 
 *Menu Games*
-> tebakgambar
+> siapakahaku
 
 *Menu Converter*
 > sticker

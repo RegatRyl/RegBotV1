@@ -27,6 +27,7 @@
     "@mengkodingan/ckptw": "github:mengkodingan/ckptw",
     "moment-timezone": "^0.5.40",
     "util": "^0.12.5",
-    "wa-sticker-formatter": "^4.3.2"
+    "wa-sticker-formatter": "^4.3.2",
+    "openai": "^3.1.0" 
   }
 }

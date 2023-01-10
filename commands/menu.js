@@ -43,7 +43,7 @@ module.exports = {
 > siapakahaku
 
 *Menu Converter*
-> sticker
+> sticker/s
 `
 const ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "status@broadcast"}, "message": {orderMessage: {itemCount: 99999,status: 200, surface: 200, message: `Halo ${ctx.pushName}`, orderTitle: 'RegatSA', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
 ctx.sendMessage(ctx.id, {text: men}, { quoted: ftroli })

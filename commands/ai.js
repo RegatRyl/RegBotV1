@@ -14,7 +14,7 @@ const completion = await openai.createCompletion({
 });
 ctx.reply({text: `${completion.data.choices[0].text}`});
 } catch(err) {
-  ctx.reply({text: `sepertinya ada eror...`})
+  ctx.reply({text: `${err}`})
   }
 }
 }
